@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predail.AI Navigation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"> 
+    <script src="https://cdn.tailwindcss.com"></script> 
+</head>
+<style>
+    body {
+            font-family: 'Poppins';
+            position: relative;
+            margin: 0;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('assets/black-galaxy-1600-x-900-background-koiam0no5bt4v0bx.jpg') no-repeat center center fixed;
+            background-size: cover;
+            z-index: -1;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); 
+            z-index: -1;
+        }
+
+    .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-content.open {
+            max-height: 1000px; /* Arbitrary large value to ensure full expansion */
+        }
+    @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Container for the animated text */
+        .scrolling-wrapper {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        /* Applying the animation to the scrolling content */
+        .scrolling-content {
+            display: inline-block;
+            animation: scroll 15s linear infinite;
+        }
+</style>
+<body class="bg-black flex flex-col items-center justify-center min-h-screen space-y-8 h-auto">
+<!-- Overlay -->
+<div class="overlay"></div>
+    <!-- Navigation Bar -->
+    <nav class="bg-[#6B23D6] text-white rounded-[30px] px-8 py-4 flex justify-between items-center w-[80%] max-w-5xl mt-10">
+        <!-- Left Section: Navigation Links -->
+        <div class="flex space-x-8">
+            <a href="#" class="hover:text-gray-300">Home</a>
+            <a href="#" class="hover:text-gray-300">About</a>
+            <a href="#" class="hover:text-gray-300">Features</a>
+            <a href="#" class="hover:text-gray-300">Contact</a>
+        </div>
+
+        <!-- Right Section: Sign Up Button -->
+        <div>
+            <button class="bg-white text-[#6B23D6] font-bold py-2 px-6 rounded-full hover:bg-gray-100">
+                SIGN UP
+            </button>
+        </div>
+    </nav>
+
+    <!-- Section -->
+    <div class="bg-[#6B23D6] text-white rounded-[30px] p-10 flex items-center justify-between w-[80%] max-w-5xl">
+        <!-- Left Section: Text Content -->
+        <div>
+            <h1 class="text-5xl font-bold mb-4 leading-tight">GAMPANG QUIZ.</h1>
+            <p class="text-sm mb-6 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, aperiam voluptatem fugit eius quidem unde est fugiat culpa consequuntur dignissimos!</p>
+            <div class="flex space-x-4">
+                <button class="bg-white text-[#6B23D6] font-bold py-3 px-6 rounded-full hover:bg-gray-100">TRY IT'S FREE</button>
+                <a href="#" class="text-white font-bold flex items-center hover:text-gray-300 bg-black py-3 px-6 rounded-full">
+                    LEARN MORE 
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Section: Image Content -->
+        <div class="relative">
+            <img src="assets/Eve-removebg-preview.png" alt="AI Character" class="w-full"> <!-- Replace with your image -->
+        </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="scrolling-wrapper w-full">
+        <div class="scrolling-content flex space-x-8 py-4">
+            <a href="#" class="text-xl font-bold text-gray-400 hover:text-gray-200">GAMPANG</a>
+            <a href="#" class="text-xl font-bold text-gray-400 hover:text-gray-200">MUDAH</a>
+            <a href="#" class="text-xl font-bold text-gray-400 hover:text-gray-200">SLEBEW</a>
+            <a href="#" class="text-xl font-bold text-gray-400 hover:text-gray-200">ANJAY</a>
+            <a href="#" class="text-xl font-bold text-gray-400 hover:text-gray-200">JB STYLE BRADER</a>
+            <!-- Duplicate content to create seamless loop -->
+            <a href="#" class="text-xl font-bold text-gray-400 hover:text-gray-200">GAMPANG</a>
+            <a href="#" class="text-xl font-bold text-gray-400 hover:text-gray-200">MUDAH</a>
+            <a href="#" class="text-xl font-bold text-gray-400 hover:text-gray-200">SLEBEW</a>
+            <a href="#" class="text-xl font-bold text-gray-400 hover:text-gray-200">ANJAY</a>
+            <a href="#" class="text-xl font-bold text-gray-400 hover:text-gray-200">JB STYLE BRADER</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="text-center mt-8">
+        <h1 class="text-4xl font-bold text-white">Meet the Feature of Gampang Quiz</h1>
+        <p class="text-sm text-gray-400 mt-4 max-w-2xl mx-auto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos explicabo officia magnam neque libero facere quos sunt obcaecati aliquam illum.
+        </p>
+    </div>
+
+    <!-- Feature Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto mt-12 px-4">
+        <div class="bg-[#6B23D6] p-6 rounded-[30px] shadow-lg">
+            <h2 class="text-xl font-bold mb-2 text-white">Gampang</h2>
+            <p class="text-gray-400 text-sm text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate incidunt voluptas debitis libero nam voluptatum.</p>
+        </div>
+        <div class="bg-[#6B23D6] p-6 rounded-[30px] shadow-lg">
+            <h2 class="text-xl font-bold mb-2 text-white">Selebew</h2>
+            <p class="text-gray-400 text-sm text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate incidunt voluptas debitis libero nam voluptatum.</p>
+        </div>
+        <div class="bg-[#6B23D6] p-6 rounded-[30px] shadow-lg">
+            <h2 class="text-xl font-bold mb-2 text-white">Anjay</h2>
+            <p class="text-gray-400 text-sm text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate incidunt voluptas debitis libero nam voluptatum.</p>
+        </div>
+        <div class="bg-[#6B23D6] p-6 rounded-[30px] shadow-lg">
+            <h2 class="text-xl font-bold mb-2 text-white">Jaybee Style</h2>
+            <p class="text-gray-400 text-sm text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate incidunt voluptas debitis libero nam voluptatum.</p>
+        </div>
+    </div>
+
+    <!-- Container -->
+    <div class="bg-[#6B23D6] text-white rounded-[30px] p-10 flex items-center justify-between w-[100%] max-w-5xl">
+
+        <!-- Robot Image -->
+        <div class="w-1/2">
+            <img src="assets/Eve-removebg-preview.png" alt="Robot Image" class="w-full h-auto">
+        </div>
+
+        <!-- Text and Button Section -->
+        <div class="w-1/2 text-white">
+            <h1 class="text-4xl font-bold mb-4">Sign up now & get the gampang everyday.</h1>
+            <p class="text-lg font-semibold mb-2"><br>NO MATTER WHAT YOU DO. WE HAVE GAMPANG VIBE.</p>
+            <p class="text-sm text-gray-300 mb-6">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, animi.
+            </p>
+            <button class="bg-white text-purple-800 font-bold py-3 px-6 rounded-full">TRY IT'S FREE</button>
+        </div>
+
+    </div>
+
+    <div class="bg-[#6B23D6] text-white rounded-[30px] p-10 flex items-center justify-center w-[100%] max-w-5xl">
+        <!-- FAQ Section -->
+        <div class="w-full md:w-2/3">
+            <h1 class="text-3xl font-bold mb-8 text-center">Your frequently asked questions.</h1>
+
+            <!-- FAQ Item 1 -->
+            <div class="mb-4">
+                <button class="w-full text-left py-4 px-6 bg-gray-800 rounded-lg flex justify-between items-center focus:outline-none accordion-toggle">
+                    <span>Lorem ipsum dolor sit amet?</span>
+                    <span class="text-xl transform transition-transform duration-200">+</span>
+                </button>
+                <div class="accordion-content px-6 py-4 bg-gray-700 rounded-lg mt-2">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius saepe doloribus molestiae, rem eaque praesentium.</p>
+                </div>
+            </div>
+            <div class="mb-4">
+                <button class="w-full text-left py-4 px-6 bg-gray-800 rounded-lg flex justify-between items-center focus:outline-none accordion-toggle">
+                    <span>Lorem ipsum dolor sit amet?</span>
+                    <span class="text-xl transform transition-transform duration-200">+</span>
+                </button>
+                <div class="accordion-content px-6 py-4 bg-gray-700 rounded-lg mt-2">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius saepe doloribus molestiae, rem eaque praesentium.</p>
+                </div>
+            </div>
+            <div class="mb-4">
+                <button class="w-full text-left py-4 px-6 bg-gray-800 rounded-lg flex justify-between items-center focus:outline-none accordion-toggle">
+                    <span>Lorem ipsum dolor sit amet?</span>
+                    <span class="text-xl transform transition-transform duration-200">+</span>
+                </button>
+                <div class="accordion-content px-6 py-4 bg-gray-700 rounded-lg mt-2">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius saepe doloribus molestiae, rem eaque praesentium.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Accordion -->
+    <script>
+        document.querySelectorAll('.accordion-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('span:last-child');
+                
+                if (content.classList.contains('open')) {
+                    content.style.maxHeight = '0';
+                    content.classList.remove('open');
+                    icon.textContent = '+';
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    content.classList.add('open');
+                    icon.textContent = '-';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
